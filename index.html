@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <!-- ==================== BAGIAN KIRI ==================== -->
+    <div class="left-bubble">
+      <h1>Input Data</h1>
+
+      <form id="mahasiswaForm">
+        <div class="form-group">
+          <label>Nama Lengkap:</label>
+          <input type="text" id="nama" required>
+        </div>
+
+        <div class="form-group">
+          <label>NIM:</label>
+          <input type="text" id="nim" required>
+        </div>
+
+        <div class="form-group">
+          <label>Semester:</label>
+          <input type="number" id="semester" min="1" max="14" required>
+        </div>
+
+        <div class="form-group">
+          <label>Program Studi:</label>
+          <select id="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option>Teknik Pertambangan</option>
+            <option>Sistem Informasi</option>
+            <option>Teknik Informatika</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="button-container">
+          <button type="submit">Kirim Data</button>
+        </div>
+
+        <div class="info" id="infoText"></div>
+      </form>
+    </div>
+
+    <!-- ==================== BAGIAN KANAN ==================== -->
+    <div class="right-column">
+      <div class="info-bubble">
+        <h2>Informasi Pengiriman</h2>
+        <p>apa yang akan terjadi jika anda klik "kirim data".</p>
+      </div>
+
+      <div class="table-bubble">
+        <h2>Data Mahasiswa</h2>
+        <table id="tabelMahasiswa">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Lengkap</th>
+              <th>Info</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
